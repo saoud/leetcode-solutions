@@ -3,13 +3,13 @@
 // Example 1:
 // Input: digits = ["1","3","5","7"], n = 100
 // Output: 20
-// Explanation: 
+// Explanation:
 // The 20 numbers that can be written are:
 // 1, 3, 5, 7, 11, 13, 15, 17, 31, 33, 35, 37, 51, 53, 55, 57, 71, 73, 75, 77.
 // Example 2:
 // Input: digits = ["1","4","9"], n = 1000000000
 // Output: 29523
-// Explanation: 
+// Explanation:
 // We can write 3 one digit numbers, 9 two digit numbers, 27 three digit numbers,
 // 81 four digit numbers, 243 five digit numbers, 729 six digit numbers,
 // 2187 seven digit numbers, 6561 eight digit numbers, and 19683 nine digit numbers.
@@ -30,23 +30,23 @@
  * @param {number} n
  * @return {number}
  */
- var atMostNGivenDigitSet = function(digits, n) {
-        let nums = [];
-        let num = 0;
-        let numStr = '';
-        for (let i = 0; i < digits.length; i++) {
-            numStr += digits[i];
-            num = parseInt(numStr);
-            nums.push(num);
-        }
-        nums.sort((a, b) => a - b);
-        let res = 0;
-        let i = 0;
-        while (num <= n) {
-            res += nums.length - i;
-            numStr += digits[i];
-            num = parseInt(numStr);
-            i++;
-        }
-        return res;
+var atMostNGivenDigitSet = function (digits, n) {
+  let nums = [];
+  let num = 0;
+  let numStr = "";
+  for (let i = 0; i < digits.length; i++) {
+    numStr += digits[i];
+    num = parseInt(numStr);
+    nums.push(num);
+  }
+  nums.sort((a, b) => a - b);
+  let res = 0;
+  let i = 0;
+  while (num <= n) {
+    res += nums.length - i;
+    numStr += digits[i];
+    num = parseInt(numStr);
+    i++;
+  }
+  return res;
 };

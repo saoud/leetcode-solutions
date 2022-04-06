@@ -35,4 +35,4 @@ function longestPalindrome(s) {
     expandRange(s, start, start + 1);
   }
   return s.slice(resultStart, resultStart + resultLength);
-};
+}

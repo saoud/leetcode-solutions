@@ -4,8 +4,6 @@
 
 // You can return the answer in any order.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,7,11,15], target = 9
@@ -22,8 +20,6 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
- 
-
 // Constraints:
 
 //     2 <= nums.length <= 104
@@ -31,18 +27,17 @@
 //     -109 <= target <= 109
 //     Only one valid answer exists.
 
-
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
  */
- const twoSum = function(nums, target) {
+const twoSum = function (nums, target) {
   const comp = {};
-  for(let i=0; i<nums.length; i++){
-      if(comp[nums[i] ]>=0){
-          return [ comp[nums[i] ] , i]
-      }
-      comp[target-nums[i]] = i
+  for (let i = 0; i < nums.length; i++) {
+    if (comp[nums[i]] >= 0) {
+      return [comp[nums[i]], i];
+    }
+    comp[target - nums[i]] = i;
   }
 };

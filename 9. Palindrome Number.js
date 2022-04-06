@@ -4,8 +4,6 @@
 
 //     For example, 121 is a palindrome while 123 is not.
 
- 
-
 // Example 1:
 
 // Input: x = 121
@@ -24,8 +22,6 @@
 // Output: false
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
- 
-
 // Constraints:
 
 //     -231 <= x <= 231 - 1
@@ -34,13 +30,13 @@
  * @param {number} x
  * @return {boolean}
  */
- var isPalindrome = function(x) {
-    if (x < 0) return false;
-    let num = x;
-    let numStr = '';
-    while (num > 0) {
-        numStr += num % 10;
-        num = Math.floor(num / 10);
-    }
-    return numStr === numStr.split('').reverse().join('');
+var isPalindrome = function (x) {
+  if (x < 0) return false;
+  let num = x;
+  let numStr = "";
+  while (num > 0) {
+    numStr += num % 10;
+    num = Math.floor(num / 10);
+  }
+  return numStr === numStr.split("").reverse().join("");
 };

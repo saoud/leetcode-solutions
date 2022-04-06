@@ -18,21 +18,21 @@
  * @param {string} s
  * @return {boolean}
  */
- var repeatedSubstringPattern = function(s) {
-      let len = s.length;
-      for (let i = len / 2; i >= 1; i--) {
-          if (len % i === 0) {
-              let sub = s.slice(0, i);
-              let count = 0;
-              for (let j = 0; j < len; j += i) {
-                  if (s.slice(j, j + i) === sub) {
-                      count++;
-                  }
-              }
-              if (count === len / i) {
-                  return true;
-              }
-          }
+var repeatedSubstringPattern = function (s) {
+  let len = s.length;
+  for (let i = len / 2; i >= 1; i--) {
+    if (len % i === 0) {
+      let sub = s.slice(0, i);
+      let count = 0;
+      for (let j = 0; j < len; j += i) {
+        if (s.slice(j, j + i) === sub) {
+          count++;
+        }
       }
-      return false;
-  };
+      if (count === len / i) {
+        return true;
+      }
+    }
+  }
+  return false;
+};

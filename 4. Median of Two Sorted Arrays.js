@@ -21,7 +21,7 @@
  * @param {number[]} nums2
  * @return {number}
  */
- var findMedianSortedArrays = function(nums1, nums2) {
+var findMedianSortedArrays = function (nums1, nums2) {
   let merged = [];
   let i = 0;
   let j = 0;
@@ -42,6 +42,9 @@
     merged.push(nums2[j]);
     j++;
   }
-  let median = merged.length % 2 === 0 ? (merged[merged.length / 2 - 1] + merged[merged.length / 2]) / 2 : merged[Math.floor(merged.length / 2)];
+  let median =
+    merged.length % 2 === 0
+      ? (merged[merged.length / 2 - 1] + merged[merged.length / 2]) / 2
+      : merged[Math.floor(merged.length / 2)];
   return median;
 };
