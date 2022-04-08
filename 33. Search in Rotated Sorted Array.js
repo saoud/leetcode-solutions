@@ -22,10 +22,8 @@
 //     nums is an ascending array that is possibly rotated.
 //     -104 <= target <= 104
 
-
 // Runtime: 52 ms, faster than 99.87% of JavaScript online submissions for Search in Rotated Sorted Array.
 // Memory Usage: 42.4 MB, less than 15.75% of JavaScript online submissions for Search in Rotated Sorted Array.
-
 
 /**
  * @param {number[]} nums

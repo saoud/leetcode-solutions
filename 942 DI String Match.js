@@ -19,19 +19,19 @@
  * @param {string} s
  * @return {number[]}
  */
- var diStringMatch = function(s) {
-     let arr = [];
-      let i = 0;
-      let j = s.length;
-      for (let k = 0; k < s.length; k++) {
-          if (s[k] === 'I') {
-              arr.push(i);
-              i++;
-          } else {
-              arr.push(j);
-              j--;
-          }
-      }
+var diStringMatch = function (s) {
+  let arr = [];
+  let i = 0;
+  let j = s.length;
+  for (let k = 0; k < s.length; k++) {
+    if (s[k] === "I") {
       arr.push(i);
-      return arr;  
+      i++;
+    } else {
+      arr.push(j);
+      j--;
+    }
+  }
+  arr.push(i);
+  return arr;
 };

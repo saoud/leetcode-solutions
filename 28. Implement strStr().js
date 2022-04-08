@@ -8,7 +8,6 @@
 
 // For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
 
- 
 
 // Example 1:
 
@@ -25,8 +24,6 @@
 // Input: haystack = "", needle = ""
 // Output: 0
 
- 
-
 // Constraints:
 
 //     0 <= haystack.length, needle.length <= 5 * 104
@@ -37,19 +34,19 @@
  * @param {string} needle
  * @return {number}
  */
- var strStr = function(haystack, needle) {
-      if (!needle) return 0;
-      let i = 0;
-      let j = 0;
-      while (i < haystack.length && j < needle.length) {
-          if (haystack[i] === needle[j]) {
-              i++;
-              j++;
-          } else {
-              i = i - j + 1;
-              j = 0;
-          }
-      }
-      if (j === needle.length) return i - j;
-      return -1;
-  };
+var strStr = function (haystack, needle) {
+  if (!needle) return 0;
+  let i = 0;
+  let j = 0;
+  while (i < haystack.length && j < needle.length) {
+    if (haystack[i] === needle[j]) {
+      i++;
+      j++;
+    } else {
+      i = i - j + 1;
+      j = 0;
+    }
+  }
+  if (j === needle.length) return i - j;
+  return -1;
+};

@@ -8,8 +8,6 @@
 
 // You may not modify the values in the list's nodes. Only nodes themselves may be changed.
 
- 
-
 // Example 1:
 
 // Input: head = [1,2,3,4]
@@ -19,8 +17,6 @@
 
 // Input: head = [1,2,3,4,5]
 // Output: [1,5,2,4,3]
-
- 
 
 // Constraints:
 
@@ -38,20 +34,20 @@
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
  */
- var reorderList = function(head) {
-    if (!head) return;
-    let slow = head;
-    let fast = head;
-    while (fast.next && fast.next.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    let second = slow.next;
-    slow.next = null;
-    let first = head;
-    // let secondReverse = reverse(second); <--- Doesnt work
-    let firstReverse = reverse(first);
-    let res = merge(firstReverse, secondReverse);
-    head = res;
-    return head;
- };
+var reorderList = function (head) {
+  if (!head) return;
+  let slow = head;
+  let fast = head;
+  while (fast.next && fast.next.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  let second = slow.next;
+  slow.next = null;
+  let first = head;
+  // let secondReverse = reverse(second); <--- Doesnt work
+  let firstReverse = reverse(first);
+  let res = merge(firstReverse, secondReverse);
+  head = res;
+  return head;
+};

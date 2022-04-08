@@ -20,7 +20,7 @@
  * @param {string} s
  * @return {number}
  */
-  var lengthOfLongestSubstring = function (s) {
+var lengthOfLongestSubstring = function (s) {
   //instantiate set to store substring
   let set = new Set();
   let count = 0;
